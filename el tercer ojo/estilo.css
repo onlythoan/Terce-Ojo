@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&family=Staatliches&display=swap');
+
+/* color cuerpo */
+body {
+    background: #f9fd01;
+    font-family: "Monserrat", sans-serif;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+}
+/* nav hamburguesa responsive */ 
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.logo {
+    width: 50px;
+    margin-left: 20px;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: #fc4cc7f2;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.navmenu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: #ffffff;
+    text-align: center;
+    transition: all .5s;
+}
+
+.navmenu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.navmenu li a {
+    color: #000000;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.navmenu li a.active, .navmenu li a:hover {
+    color: #fc4cc7f2;
+    transition: .4s;
+}
+
+/* esto es para ocultar el boton "check" */
+#check {
+    display: none;
+}
+
+#check:checked ~ .navmenu {
+    height: 100vh;
+}
+
+#check:checked ~ .navmenu li {
+    display: block;
+}
+
+/* banner encabezado */
+.banner-text {
+    padding:0 30px;
+    margin-top: 50px;
+    color: #000000;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.banner-text span {
+    color: #fc4cc7f2;
+}
+
+.banner-text h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* botones */
+
+.boton1 {
+    margin-top: 100px;
+    margin-right: 70px;
+    padding: 10px 30px;
+    background-color: #000000;
+    color: #f9fd01;
+    border-radius: 20px;
+}
+
+.boton1:hover {
+    background-color: #fc4cc7f2;
+    color: black;
+    transition: .3s;
+}
+
+.boton2 {
+    margin-right: 70px;
+    padding: 10px 30px;
+    background-color: #fc4cc7f2;
+    color: #000000;
+    border-radius: 20px;
+}
+
+.boton2:hover {
+    background-color: #000000;
+    color: #f9fd01;
+    transition: .3s;
+}
+
+/* navegador responsite escritorio */
+
+@media screen and (min-width: 760px){
+    .logo {
+        margin-left: 50px;
+    }
+    nav {
+        height: 100px;
+    }
+    /* oculto el boton hamburguesa en el escritotio */
+    .bar-btn {
+        display: none;
+    }
+
+    .navmenu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .navmenu li {
+        display: inline-block;
+        line-height: 100px;
+        margin:0 20px;
+        transition: none;
+    }
+
+    .navmenu li a {
+        font-size: 15px;
+    }
+
+    .banner-text h1 {
+        font-size: 60px;
+        margin-bottom: 30px;
+    }
+
+    .banner-text h2 {
+        font-size: 30px;
+    }
+}      
+
+.contenedor-title {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-flex {
+    text-align: justify;
+    background-color: #ffffff;
+    margin-top: 25px;
+}
+
+/* contenedor Cajas nuestros servicios*/
+.contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.contenedor h1 {
+    padding: 25px;
+    background: #fc4cc7f2;
+    border-radius: 0px 10px 0px 0px;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.8);
+}
+
+.retrato {
+    width: 100%;
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.contenido-box1 {
+    background-color: #fc4cc7f2;
+    padding: 15px;
+    text-align: center;
+}
+
+.contenido-box1 p {
+    line-height: 1.5;
+    color: #ffffff;
+}
+.contenido-box1 h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contenido-box2 {
+    background-color: #f9fd01;
+    padding: 15px;
+    text-align: center;
+}
+
+.contenido-box2 p {
+    line-height: 1.5;
+    color: #000000;
+}
+.contenido-box2 h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contenido-box1 a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+.contenido-box1 a:hover {
+    background: #ffffff;
+    color: #fc4cc7f2;
+}
+
+.contenido-box2 a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    transition: all 400ms ease;
+}
+
+.contenido-box2 a:hover {
+    background: #000000;
+    color: #f9fd01;
+}
+
+.retrato:hover {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
+    transform: translateY(-3%);
+}
+
+.retrato img {
+    width: 100%;
+}
